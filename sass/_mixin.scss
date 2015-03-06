@@ -1,0 +1,276 @@
+//------------------------------------*\
+//		AuTiMoThY
+//		V 3.10.0
+//------------------------------------*/
+@mixin wh($width:100%, $height:$width) {
+	@if type-of($width) == number or $width == "auto" {
+		width: $width;
+		height: $height;
+	} @else {
+		$name: $width;
+		$file: $height;
+		width: image-width("../images/#{$name}.#{$file}");
+		height: image-height("../images/#{$name}.#{$file}");
+	}
+}
+@mixin bg($name, $bgpx:0, $bgpy:0, $repeat:no-repeat) {
+	// $name: unquote($name);
+	// $repeat: unquote($repeat);
+	@if type-of($name) == number {
+		//  background-position
+		$bgpxx: $name;
+		$bgpy: $bgpx;
+		background-position: $bgpxx $bgpy;
+	} @else if type-of($name) == color {
+		//  background-color
+		background-color: $name;
+	} @else if $name == "fixed" or $name == "scroll" {
+		$atta: $name;
+		background-attachment: $atta;
+	} @else if $name == "none"{
+		background-image: none;
+	} @else {
+		background: image-url(#{$name}) $bgpx $bgpy $repeat;
+	}
+}
+@mixin bg-i($x:0, $y:0) {
+	@include bg('iconTxt.png', $x, $y);
+}
+@mixin bg-t($x:0, $y:0) {
+	@include bg('txts.png', $x, $y);
+}
+@mixin hide_txt() {
+	text-indent: 110%;
+	white-space: nowrap;
+	overflow: hidden;
+	display: block;
+}
+@mixin hover($top:1px, $left:1px) {
+	@include translate($top, $left);
+}
+
+//========================================================================*\
+//	>	align center
+//========================================================================*/
+@mixin align-C() {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+@mixin VerticalAlign() {
+	position: relative;
+	top: 50%;
+	@include translateY(-50%);
+}
+@mixin vc() {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+
+@mixin psudoClass() {
+	content: '';
+	display: block;
+}
+@mixin ellipsis() {
+	overflow:hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+@mixin adjFont($to-size, $font-weight:normal, $lines: auto, $from-size: $base-font-size) {
+	@include adjust-font-size-to($to-size, $lines, $from-size);
+	font-weight: $font-weight;
+}
+@mixin adjFontSize($to-size, $lines: auto, $from-size: $base-font-size) {
+	@include adjust-font-size-to($to-size, $lines, $from-size);
+}
+
+
+@mixin picImg() {
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+@mixin ib {
+  display: inline-block;
+  vertical-align: middle !important;
+  padding:0;
+  background-image:none
+}
+@mixin col {
+  display: inline-block;
+  vertical-align: top;
+}
+@mixin col-2 {
+  @include col;
+  width: 49%;
+}
+@mixin col-3 {
+  @include col;
+  width: 32%;
+}
+@mixin col-4 {
+  @include col;
+  width: 24.9%;
+}
+@mixin atRoot() {
+	@at-root { @content; }
+}
+@mixin ul() {
+	margin-bottom: 1.25em;
+	list-style-position: outside;
+	font-size: 1em;
+	line-height: 1.6;
+}
+
+
+//========================================================================*\
+//	>	Shape
+//========================================================================*/
+@mixin circle($width, $height:$width) {
+	width: $width;
+	height: $height;
+	border-radius: 50%;
+}
+@mixin triPrev($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: $w $w2 $w 0;
+		color: transparent $color transparent transparent;
+	}
+}
+@mixin triNext($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: $w 0 $w $w2;
+		color: transparent transparent transparent $color;
+	}
+}
+@mixin triBtm($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: $w2 $w 0 $w;
+		color: $color transparent transparent transparent;
+	}
+}
+@mixin triTop($color, $w, $w2:(($w * 2) - 3px)) {
+	@include wh(0);
+	border: {
+		style: solid;
+		width: 0 $w $w2 $w;
+		color: transparent transparent $color transparent;
+	}
+}
+/// Triangle helper mixin
+/// @param {Direction} $direction - Triangle direction, either `top`, `right`, `bottom` or `left`
+/// @param {Color} $color [currentcolor] - Triangle color 
+/// @param {Length} $size [1em] - Triangle size
+@mixin triangle($direction, $color: currentcolor, $size: 1em) {
+  @if not index(top right bottom left, $direction) {
+    @error "Direction must be either `top`, `right`, `bottom` or `left`.";
+  }
+
+  width: 0;
+  height: 0;
+  content: '';
+  z-index: 2;
+  border-#{opposite-position($direction)}: ($size * 1.5) solid $color;
+  
+  $perpendicular-borders: $size solid transparent;
+  
+  @if $direction == top or $direction == bottom {
+    border-left:   $perpendicular-borders;
+    border-right:  $perpendicular-borders;
+  } @else if $direction == right or $direction == left {
+    border-bottom: $perpendicular-borders;
+    border-top:    $perpendicular-borders;
+  }
+}
+
+
+
+@mixin specBorder() {
+	@include bg(#f4f4f4);
+	border: 2px solid #bec2c5;
+	@include box-shadow(inset 3px 3px 0 rgba(0, 0, 0, 0.06));
+	padding: 4px 0;
+	color: #303030;
+}
+
+
+///  Maintain Aspect Ratio Mixin
+@mixin aspect-ratio($width, $height) {
+  position: relative;
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: ($height / $width) * 100%;
+  }
+  > .content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+@mixin container() {
+	position: relative;
+	top: 200px;
+	padding: 80px;
+	margin-bottom: 200px;
+}
+@mixin input_common() {
+	@include wh(240px, 30px);
+	line-height: 30px;
+	border: 1px solid #b09e70;
+}
+@mixin label_common() {
+	@include wh(70px, 30px);
+	display: inline-block;
+	@include member_txt1;
+	text-align: right;
+	margin-right: 10px;
+}
+
+
+
+
+@mixin respond-to($screenWidth) {
+  @if $screenWidth == L-screen {
+    @media screen and (max-width: 1920px) { @content; }
+  }
+  @else if $screenWidth == M-screen {
+    @media screen and (max-width: 1024px) { @content; }
+  }
+  @else if $screenWidth == S-screen {
+    @media screen and (max-width: 320px) { @content; }
+  }
+}
+
+//========================================================================*\
+//	>	project
+//========================================================================*/
+@mixin addToCartBtn() {
+	@include wh(167px, 43px);
+	@include bg('iconTxt.png', 0, -368px);
+	padding-left: 0;
+	padding-right: 0;
+}
+
+@mixin line() {
+	@include psudoClass;
+	@include wh;
+	@include bg('line2.png', 0, 0, repeat);
+	position: absolute;
+	top: 0;
+	z-index: 0;
+}
+

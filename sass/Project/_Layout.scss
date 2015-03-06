@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+.index_page {
+	@include bg('bg.jpg', 50%, 50%);
+	background-size: cover;
+	position: relative;
+}
+
+.apply {
+	@include wh(139px, 39px);
+	position: absolute;
+	bottom: 11%;
+	left: -6%;
+	right: 0;
+	margin: auto;
+	// transition: all 0.3s ease;
+	&:hover {
+		// @include scale(1.05);
+	}
+}
+.menu {
+	width: 1200px;
+	margin: auto;
+	li {
+		margin: 0 1.7em;
+		@each $item, $w, $h in
+			(item1, 197px, 58px),
+			(item2, 156px, 58px),
+			(item3, 156px, 58px),
+			(item4, 197px, 58px),
+			(item5, 174px, 58px) {
+			&.#{$item} {
+				@include wh($w, $h);
+			}
+		}
+		@for $i from 1 through 5 {
+			&.item#{$i} {
+				@include bg('menu#{$i}.png');
+			}
+		}
+		a {
+			@include wh;
+			display: block;
+		}
+		&.item3 {
+			&:hover {
+				transform: translateY(-10px);
+			}
+		}
+	}
+
+}
+/*========================================================================*\
+		>>	layout main
+\*========================================================================*/
+// article#main {
+// 	@include rhythm(0.8);
+// }
