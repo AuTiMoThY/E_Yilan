@@ -32,15 +32,52 @@
 
 <body class="index_page">
 
-<div class="menu">
-	<ul>
-		<li class="item1"></li>
-		<li class="item2"></li>
-		<li class="item3"><a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"></a></li>
-		<li class="item4"></li>
-		<li class="item5"></li>
-	</ul>
-</div>
+<div class="fullBg"></div>
+<header class="cloud">
+	<nav class="menu">
+		<ul>
+			<li class="item1"></li>
+			<li class="item2"></li>
+			<li class="item3"><a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"></a></li>
+			<li class="item4"></li>
+			<li class="item5"></li>
+		</ul>
+	</nav>
+</header>
+
+<main>
+	<section id="slide1" class="slide sec1">
+		<div class="slide-wrap">
+			<div class="slide-container">
+				
+			</div>
+		</div>
+	</section>
+	<section id="slide2" class="slide sec2">
+		<div class="slide-wrap">
+			<div class="slide-container">
+				
+			</div>
+		</div>
+	</section>
+	<section id="slide3" class="slide sec3">
+		<div class="slide-wrap">
+			<div class="slide-container">
+				
+			</div>
+		</div>
+	</section>
+	<section id="slide4" class="slide sec4">
+		<div class="slide-wrap">
+			<div class="slide-container">
+				
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer class="ocean"></footer>
+
 
 <div class="apply">
 	<a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"><img src="images/apply.png" alt=""></a>
