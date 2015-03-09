@@ -1,4 +1,4 @@
-$tabsUlH: 32px;
+// $tabsUlH: 32px;
 
 .tab_block {
 	// width: 650px;
@@ -9,11 +9,11 @@ $tabsUlH: 32px;
 	// @at-root {
 	ul.tabs {
 		width: 100%;
-		height: $tabsUlH;
+		// height: $tabsUlH;
 		position: relative;
 		z-index: 1;
 		li {
-			@include wh(auto, 100%);
+			// @include wh(auto, 100%);
 			// @include bg(#e1e1e1);
 			float: left;
 			// overflow: hidden;
@@ -40,7 +40,7 @@ $tabsUlH: 32px;
 }
 
 
-div.tab_container {
+.tab_container {
 	clear: left;
 	width: 100%;
 	// background: #fff;

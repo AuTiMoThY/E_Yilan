@@ -32,56 +32,170 @@
 
 <body class="index_page">
 
-<div class="fullBg"></div>
+<div class="fullBg"
+	data-0="background-position:0px 0px;"
+	data-end="background-position:0px -1600px;"></div>
+
 <header class="cloud">
-	<nav class="menu">
-		<ul>
-			<li class="item1"></li>
+	<nav class="main_nav">
+		<ul class="js-goWhere">
+			<li class="item1"><a href="#slide3" class="hide_txt">活動計畫</a></li>
 			<li class="item2"></li>
 			<li class="item3"><a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"></a></li>
 			<li class="item4"></li>
-			<li class="item5"></li>
+			<li class="item5"><a href="#slide4" class="hide_txt"> 諮詢服務</a></li>
 		</ul>
 	</nav>
 </header>
+<div class="apply">
+	<a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"><img src="images/apply.png" alt=""></a>
+</div>
+<div class="model">
+	<img src="images/model.png" alt="">
+</div>
 
 <main>
 	<section id="slide1" class="slide sec1">
-		<div class="slide-wrap">
+		<div class="slide-wrap"
+			data-anchor-target="#slide1">
 			<div class="slide-container">
-				
+				<article class="slide-content intro">
+					<div class="intro-pic pic1"><img src="images/intro-pic1.png" alt=""></div>
+					<div class="intro-pic pic2"><img src="images/intro-pic2.png" alt=""></div>
+					<div class="intro-pic pic3"><img src="images/intro-pic3.png" alt=""></div>
+					<h1 class="hide_txt">2015宜蘭四季創意遊程</h1>
+					<p>宜蘭四季怎麼玩，夏天童玩、冬天溫泉，還有甚麼不一樣的呢？請您運用奇想，發揮創意，以春、夏、秋、冬宜蘭四季不同景色、生態、節慶、社區文化、休閒農業、天然資源、特色建築等亮點，拿出你的私房遊程，挑戰旅遊達人的腦力極限，展現你的宜蘭創意獨家遊程，拿獎金，赚現金。</p>
+				</article>
 			</div>
 		</div>
 	</section>
+
 	<section id="slide2" class="slide sec2">
-		<div class="slide-wrap">
-			<div class="slide-container">
-				
+		<div class="slide-wrap"
+			data-anchor-target="#slide2">
+			<div class="slide-container"
+				data-bottom-top="opacity: 0;"
+				data-50p-top="opacity: 1;"
+				data-top="opacity: 1;"
+				data-anchor-target="#slide2">
+				<div class="pic">
+					<img src="images/sec2.png" alt="">
+				</div>
 			</div>
 		</div>
 	</section>
 	<section id="slide3" class="slide sec3">
-		<div class="slide-wrap">
-			<div class="slide-container">
-				
+		<div class="slide-wrap"
+			data-anchor-target="#slide3">
+			<div class="slide-container"
+				data-bottom-top="opacity: 0;"
+				data-50p-top="opacity: 1;"
+				data-top="opacity: 1;"
+				data-anchor-target="#slide3">
+				<article class="slide-content plan">
+
+<div class="plan-pic pic1"><img src="images/plan-pic1.png" alt=""></div>
+<div class="plan-pic pic2"><img src="images/plan-pic2.png" alt=""></div>
+<div id="infTab" class="tab_block plan-tab_block">
+	<ul class="tabs">
+		<li class="tab1"> <a href="#tab1" id="" class="btn-tab1 hide_txt">計畫目標</a></li>
+		<li class="tab2"> <a href="#tab2" id="" class="btn-tab2 hide_txt">活動時間</a></li>
+		<li class="tab3"> <a href="#tab3" id="" class="btn-tab3 hide_txt">分組類別</a></li>
+		<li class="tab4"> <a href="#tab4" id="" class="btn-tab4 hide_txt">遊程內容</a></li>
+		<li class="tab5"> <a href="#tab5" id="" class="btn-tab5 hide_txt">報名方式</a></li>
+		<li class="tab6"> <a href="#tab6" id="" class="btn-tab6 hide_txt">獎勵辦法</a></li>
+	</ul>
+	<!--  .tab_container  START  !!  -->
+	<h2 class="hide_txt">活動計畫</h2>
+	<div class="tab_container">
+		<!--  #tab1 .tab_content  START  !!  -->
+		<div id="tab1" class="tab_content scrollbar">
+			<section class="">
+				<p>邀請觀光旅遊業者、漁會、農會、民宿業者、餐飲業者、休閒農場、觀光工廠、社區發展協會等單位及對宜蘭創意遊程有想法的民眾，搭建一個展現觀光遊程設計及結合各項資源企劃能力的舞台，讓宜蘭四季旅遊兼具創意、深度及在地性。</p>
+			</section>
+		</div><!--  /#tab1 .tab_content  END  !!  -->
+
+		<!--  #tab2 .tab_content  START  !!  -->
+		<div id="tab2" class="tab_content scrollbar">
+			<section class="">
+				<ul>
+					<li>（ㄧ）報名日期：104年2月9日（ㄧ）3月9日（ㄧ）止。</li>
+					<li>（二）網路投票日期：104年3月11日（三）至3月22日（日）</li>
+					<li>（三）公佈日期：104年3月25日（三）</li>
+				</ul>
+			</section>
+		</div><!--  /#tab2 .tab_content  END  !!  -->
+
+		<!--  #tab3 .tab_content  START  !!  -->
+		<div id="tab3" class="tab_content scrollbar">
+			<section class="">
+				<p>（ㄧ）「團體組」：觀光旅遊業者及農會、漁會：凡縣內經核准立案之觀光旅遊業者（旅行社）及宜蘭縣內農會、漁會、縣內經核准立案之民宿、餐飲業者、社區發展協會、休閒農場、觀光工廠等皆可報名參加。</p><br>
+				<p>（二）「個人組」：徵召網路部落客、宜蘭旅遊達人…等，願分享宜蘭旅行私房遊程，提供宜蘭創意遊程規劃參與甄選，遊程企劃書及文字須未於網路或平面、電子媒體發表，獲選者將邀請擔任「達人帶路，創意旅遊」代言人，帶隊漫遊宜蘭各私房秘境、創意遊程。</p>
+			</section>
+		</div><!--  /#tab3 .tab_content  END  !!  -->
+
+		<!--  #tab4 .tab_content  START  !!  -->
+		<div id="tab4" class="tab_content scrollbar">
+			<section class="">
+				<p>參賽分為春、夏、秋、冬四類遊程－採書面審查評選及民眾網路票選<br>企劃書內容必須以宜蘭縣內單一季節的觀光旅遊資源進行遊程規劃。遊程企劃書內頁總頁數在20頁以內，附錄則依各參加甄選單位需要自行決定是否附加，其頁數不限。</p>
+			</section>
+		</div><!--  /#tab4 .tab_content  END  !!  -->
+
+		<!--  #tab5 .tab_content  START  !!  -->
+		<div id="tab5" class="tab_content scrollbar">
+			<section class="">
+<p>
+（ㄧ）請於活動官網（宜蘭縣政府工商旅遊處網站）列印報名表、企畫書、參與甄選聲明書，並於報名期限內，將報名表及企劃書(附件一)、參加甄選聲明書(附件二)以 EMAIL方式至主辦單位minghong0522@mail.e-land.gov.tw，或以掛號郵寄「26060宜蘭市縣政北路1號工商旅遊處觀光行銷科」(信封上註明2015宜蘭四季創意遊程甄選字樣)。<br>
+（二）主辦單位將於三天內回覆報名結果，如果未收到回覆結果，請聯絡主辦單位。<br>
+（三）參賽隊伍須繳交之文件：<br>
+ 1.報名表連同企劃書乙份。<br>
+ 2.參加甄選聲明書乙份。<br>
+請將上述文件以EMAIL或郵寄掛號寄至主辦單位。
+</p>
+			</section>
+		</div><!--  /#tab5 .tab_content  END  !!  -->
+
+		<!--  #tab6 .tab_content  START  !!  -->
+		<div id="tab6" class="tab_content scrollbar">
+			<section class="">
+<p>
+（ㄧ）「團體組」（包含縣內經核准立案之觀光旅遊業者（旅行社）及宜蘭縣內農會、漁會、縣內經核准立案之民宿、餐飲業者、社區發展協會、休閒農場、觀光工廠等）將選出春、夏、秋、冬各兩組優勝獎，共八組，獲優勝獎單位受頒獎金新台幣10,000元。<br>
+（二）「個人組」將選出春、夏、秋、冬各一組優勝獎，共四組，獲優勝獎者受頒獎金新台幣10,000元。
+</p>
+			</section>
+		</div><!--  /#tab6 .tab_content  END  !!  -->
+
+	</div><!--  /.tab_container  END  !!  -->
+</div>
+
+
+
+				</article>
 			</div>
 		</div>
 	</section>
 	<section id="slide4" class="slide sec4">
-		<div class="slide-wrap">
-			<div class="slide-container">
-				
+		<div class="slide-wrap"
+			data-anchor-target="#slide4">
+			<div class="slide-container"
+				data-bottom-top="opacity: 0;"
+				data-40p-top="opacity: 1;"
+				data-top="opacity: 1;"
+				data-anchor-target="#slide4">
+				<article class="slide-content service">
+					<a href="mailto:minghong0522@mail.e-land.gov.tw"><img src="images/temp/tem1.png" alt="" class="temporary"></a>
+				</article>
 			</div>
 		</div>
 	</section>
 </main>
 
-<footer class="ocean"></footer>
+<footer class="global_ft">
+	<div class="ocean"><img src="images/frontBg.png" alt=""></div>
+</footer>
 
 
-<div class="apply">
-	<a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"><img src="images/apply.png" alt=""></a>
-</div>
+
 
 <?php
 // -------------------------------

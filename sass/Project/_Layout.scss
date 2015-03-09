@@ -1,59 +1,104 @@
 @charset "UTF-8";
 
+/* width height position padding margin  */
+
 
 .index_page {
-	@include bg('bg.jpg', 50%, 50%);
-	background-size: cover;
-	position: relative;
+	// @include bg('bg.jpg', 50%, 50%);
+	// background-size: cover;
+	// position: relative;
 }
 
-.apply {
-	@include wh(139px, 39px);
-	position: absolute;
-	bottom: 11%;
-	left: -6%;
+.fullBg {
+	position: fixed;
+	top: -5%;
+	left: 0;
+	z-index: 0;
+	@include wh;
+	@include bg('fullBg.jpg', 50%);
+}
+
+.global_ft .ocean img {
+	position: fixed;
+	bottom: -3%;
+	width: 100%;
+	// z-index: 90;
+	// @include wh(100%, 0);
+	// padding-bottom: (402 / 1920) * 100%;
+}
+
+.main_nav {
+	position: fixed;
+	top: 0;
 	right: 0;
-	margin: auto;
-	// transition: all 0.3s ease;
-	&:hover {
-		// @include scale(1.05);
-	}
+	left: 0;
+	z-index: 60;
 }
-.menu {
-	width: 1200px;
-	margin: auto;
-	li {
-		margin: 0 1.7em;
-		@each $item, $w, $h in
-			(item1, 197px, 58px),
-			(item2, 156px, 58px),
-			(item3, 156px, 58px),
-			(item4, 197px, 58px),
-			(item5, 174px, 58px) {
-			&.#{$item} {
-				@include wh($w, $h);
-			}
-		}
-		@for $i from 1 through 5 {
-			&.item#{$i} {
-				@include bg('menu#{$i}.png');
-			}
-		}
-		a {
-			@include wh;
-			display: block;
-		}
-		&.item3 {
-			&:hover {
-				transform: translateY(-10px);
-			}
-		}
-	}
 
-}
+
+
 /*========================================================================*\
 		>>	layout main
 \*========================================================================*/
-// article#main {
-// 	@include rhythm(0.8);
-// }
+main {
+	position: relative;
+	z-index: 50;
+}
+.slide {
+	position: relative;
+	z-index: 99;
+	@include wh;
+	&-wrap {
+		// position: fixed;
+		@include wh;
+	}
+	&-container {
+		position: relative;
+		@include wh;
+	}
+	&-content {
+		position: relative;
+	}
+}
+
+
+/*========================================================================*\
+		>>	layout section
+\*========================================================================*/
+.intro {
+	@include vc;
+	left: 0;
+	right: 0;
+	@include wh(1350, 712);
+}
+
+
+.sec2 {
+	@include wh(100%, 0);
+	padding-bottom: (321 / 1903) * 100%;
+	.pic {
+		position: relative;
+		right: 0;
+		left: 0;
+		margin: 0 auto 100px;
+		@include wh(sec2, png);
+	}
+}
+
+.plan {
+	@include vc;
+	left: 0;
+	right: 0;
+	@include wh(1000, 500);
+	&-tab_block {
+		z-index: 10;
+	}
+	&-pic {
+		&.pic2 {
+			z-index: 20;
+		}
+	}
+}
+
+
+
