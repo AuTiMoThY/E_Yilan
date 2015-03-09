@@ -18,11 +18,11 @@
 html, body {
 	@include wh;
 	min-height: 100%;
-	// min-width: $cnt_width;
 	// overflow-x: hidden;
 }
 
 body {
+	min-width: $cnt_width;
 	// @include bg('bg.jpg');
 	// @include background-size(cover);
 	// @include bg(scroll);

@@ -115,15 +115,28 @@ $(function () {
 	}else {
 		// console.log('not ie');
 		$.material.init();
-		var s = skrollr.init({
+
+
+		if (!(WHAT.match(/(iPhone|iPad|Android)/))) {
+			// console.log('skrollr Run');
+			var s = skrollr.init({
+				forceHeight: false,
+				render: function(data) {
+						//Debugging - Log the current scroll position.
+						console.log(data.curTop);
+				}
+			});
+			s.refresh($('.slide'));
+		}
+	}
+/*		var s = skrollr.init({
 			forceHeight: false,
 			render: function(data) {
 					//Debugging - Log the current scroll position.
 					console.log(data.curTop);
 			}
 		});
-		s.refresh($('.slide'));
-	}
+		s.refresh($('.slide'));*/
 
 	var $tabs = $("#infTab");
 	if ($tabs.length) {

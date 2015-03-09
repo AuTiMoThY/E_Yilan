@@ -58,6 +58,7 @@ html, body {
 }
 
 body {
+  min-width: 1370px;
   font-family: "Microsoft JhengHei", "微軟正黑體", \5FAE\x8F6F\6B63\9ED1\4F53, Arial, "Helvetica Neue", Helvetica;
 }
 
