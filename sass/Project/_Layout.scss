@@ -16,6 +16,7 @@
 	z-index: 0;
 	@include wh;
 	@include bg('fullBg.jpg', 50%);
+	background-size: cover;
 }
 
 .global_ft .ocean img {
