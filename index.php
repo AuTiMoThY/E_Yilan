@@ -34,7 +34,7 @@
 
 <div class="fullBg"
 	data-0="background-position:0px 0px;"
-	data-end="background-position:0px -1600px;"></div>
+	data-end="background-position:0px -1550px;"></div>
 
 <header class="cloud">
 	<nav class="main_nav">
@@ -183,6 +183,8 @@
 				data-top="opacity: 1;"
 				data-anchor-target="#slide4">
 				<article class="slide-content service">
+					
+					<div class="service-inf"></div>
 					<a href="mailto:minghong0522@mail.e-land.gov.tw"><img src="images/temp/tem1.png" alt="" class="temporary"></a>
 				</article>
 			</div>
