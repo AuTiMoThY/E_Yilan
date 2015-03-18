@@ -36,17 +36,13 @@
 	data-0="background-position:0px 0px;"
 	data-end="background-position:0px -1550px;"></div>
 
-<header class="cloud">
-	<nav class="main_nav">
-		<ul class="js-goWhere">
-			<li class="item1"><a href="#slide3" class="hide_txt">活動計畫</a></li>
-			<li class="item2"></li>
-			<li class="item3"><a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"></a></li>
-			<li class="item4"></li>
-			<li class="item5"><a href="#slide4" class="hide_txt"> 諮詢服務</a></li>
-		</ul>
-	</nav>
-</header>
+<?php
+// -------------------------------
+// Header
+// -------------------------------
+  include_once 'inc/Header.php';
+ ?>
+
 <div class="apply">
 	<a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"><img src="images/apply.png" alt=""></a>
 </div>
@@ -64,7 +60,11 @@
 					<div class="intro-pic pic2"><img src="images/intro-pic2.png" alt=""></div>
 					<div class="intro-pic pic3"><img src="images/intro-pic3.png" alt=""></div>
 					<h1 class="hide_txt">2015宜蘭四季創意遊程</h1>
-					<p>宜蘭四季怎麼玩，夏天童玩、冬天溫泉，還有甚麼不一樣的呢？請您運用奇想，發揮創意，以春、夏、秋、冬宜蘭四季不同景色、生態、節慶、社區文化、休閒農業、天然資源、特色建築等亮點，拿出你的私房遊程，挑戰旅遊達人的腦力極限，展現你的宜蘭創意獨家遊程，拿獎金，赚現金。</p>
+					<p>宜蘭四季怎麼玩，夏天童玩、冬天溫泉，還有甚麼不一樣的呢？拿出你的私房遊程，挑戰旅遊達人的腦力極限，展現你的宜蘭創意獨家遊程，拿獎金，赚現金。<br>
+					由於本活動系統故障，原訂於104年3月11日~3月20日舉辦之2015宜蘭四季創意遊程網路票選，<span class="txt-or1">投票時間延至104年3月30日~4月12日，並於4月15日公佈評選結果。</span></p>
+					<span class="txt">
+						<img src="images/txt1.png" alt="4/15公佈評選。活動總獎金新台幣120,000。">
+					</span>
 				</article>
 			</div>
 		</div>
@@ -185,7 +185,7 @@
 				<article class="slide-content service">
 					
 					<div class="service-inf"></div>
-					<a href="mailto:minghong0522@mail.e-land.gov.tw"><img src="images/temp/tem1.png" alt="" class="temporary"></a>
+					<a href="mailto:kane731227@mail.e-land.gov.tw"><img src="images/temp/tem1.png" alt="" class="temporary"></a>
 				</article>
 			</div>
 		</div>

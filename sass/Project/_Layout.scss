@@ -17,6 +17,9 @@
 	@include wh;
 	@include bg('fullBg.jpg', 50%);
 	background-size: cover;
+	&.vote {
+		background-position: 0px -1050px;
+	}
 }
 
 .global_ft .ocean img {
@@ -49,6 +52,7 @@ main {
 	position: relative;
 	z-index: 99;
 	@include wh;
+	overflow: hidden;
 	&-wrap {
 		// position: fixed;
 		@include wh;
@@ -101,5 +105,9 @@ main {
 	}
 }
 
-
+.sec-vote {
+	width: 965px;
+	margin: auto;
+	@include rhythm-padding(5);
+}
 

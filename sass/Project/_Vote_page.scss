@@ -1,0 +1,313 @@
+@charset "UTF-8";
+
+.searchBar {
+	padding: 0 3em 1em;
+	.ib {
+		display: inline-block;
+	}
+}
+
+%input_common {
+	height: 30px;
+	padding: 0 1em;
+	border-radius: 15px;
+	border: 2px solid #d8d8d8;
+	line-height: 24px;
+}
+
+.search {
+	&-form {
+		label {
+			&.txt1 {
+				@include wh(51, 30);
+				@include bg-t(0, -60);
+			}
+			&.txt2 {
+				@include wh(73, 30);
+				@include bg-t(-52, -60);
+			}
+		}
+		.btn-search {
+			@include wh(98, 44);
+			@include bg-t(-167, 0);
+			@include bg(transparent);
+			border: none;
+			outline: none;
+			&:active {
+				@include hover;
+			}
+		}
+		select {
+			@extend %input_common;
+			width: 190px;
+			-webkit-appearance:none; /* Safari and Chrome */
+			-moz-appearance:none; /* Firefox */
+			appearance: none;
+			margin-right: 2em;
+		}
+		select::-ms-expand {
+		    display: none;
+		}
+		input {
+			@extend %input_common;
+			width: 300px;
+			margin-right: 2em;
+		}
+	}
+}
+
+.vote {
+	&-wrap {
+		width: 100%;
+		@include bg('bg-vote.png', 0, 0, repeat);
+		border-radius: 5px;
+		padding: 2em;
+	}
+	&-item {
+		@include wh(285, 190);
+		margin-left: 1.4em;
+		margin-bottom: 1.4em;
+		&:nth-of-type(3n+1) {
+			margin-left: 0;
+		}
+		a {
+			@include wh;
+			display: block;
+		}
+		figure {
+			@include wh;
+			position: relative;
+			overflow: hidden;
+		}
+		figcaption {
+			position: absolute;
+			bottom: -45px;
+			width: 100%;
+			padding:0 em(13) 0.5em;
+			@include bg(rgba(#1f1e19, 0.9));
+			color: #fff;
+			transition: all 0.3s ease(in-out-quad);
+		}
+		&:hover {
+			figcaption {
+				bottom: 0;
+			}
+		}
+	}
+	&-pic {
+		@include wh(285, 190);
+	}
+	&-name {
+		width: 100%;
+		@include adjFontSize(15px, 1.5);
+		@include ellipsis;
+		// line-height: 1.5;
+	}
+	&-info {
+		@include adjFontSize(13px);
+		line-height: 1.5;
+	}
+	&-container {
+		position: relative;
+		width: 100%;
+		padding-bottom: 1em;
+		@include bg('pattern1.png', 0, 0, repeat);
+		&:before {
+			@include psudoClass;
+			position: absolute;
+			top: -17px;
+			@include wh(100%, 17);
+			@include bg('pattern2.png');
+		}
+		&:after {
+			@include psudoClass;
+			position: absolute;
+			top: -17px;
+			right: 0;
+			@include wh(393, 59);
+			@include bg('pattern3.png');
+		}
+		hgroup {
+			width: 825px;
+			margin: auto;
+			padding: 2em 0 1em;
+			.icon {
+				display: inline-block;
+				vertical-align: middle;
+			}
+			.icon1 {
+				@include wh(31);
+				@include bg-i(-260, -107);
+			}
+			.icon2 {
+				@include wh(43, 31);
+				@include bg-i(-292, -107);
+			}
+			p {
+				color: #004a45;
+				font-size: em(15);
+			}
+			span:first-of-type {
+				margin-right: 3em;
+			}
+		}
+		h1 {
+			color: #004a45;
+			@include adjFontSize(24px);
+			font-weight: bold;
+			font-family: $normal_font2;
+		}
+	}
+	&-top-pic {
+		width: 565px;
+		margin: 0 auto 1em;
+	}
+	&-cnt {
+		position: relative;
+		width: 825px;
+		margin: auto;
+		padding: 5em 1em 1em;
+		@include bg(#fcf8d9);
+		border: 10px solid #4e2600;
+		&:before {
+			@include psudoClass;
+			position: absolute;
+			top: -11px;
+			left: -11px;
+			@include wh(626, 90);
+			@include bg('pattern4.png');
+		}
+		&:after {
+			// @include psudoClass;
+			// position: absolute;
+			// top: -11px;
+			// right: -11px;
+			// @include wh(188, 119);
+			// @include bg-i(-306, -153);
+		}
+	}
+}
+
+$mr: 10px;
+.btns {
+	width: (108px * 2) + $mr;
+	margin: 1em auto;
+}
+.btn {
+	&-goList {
+		@include wh(108, 36);
+		@include bg-i(-347, 0);
+		margin-right: $mr;
+		a {
+			@include wh;
+			display: block;
+		}
+	}
+	&-goVote {
+		@include wh(108, 36);
+		@include bg-i(-347, -37);
+		a {
+			@include wh;
+			display: block;
+		}
+	}
+	&-submit {
+		display: block;
+		@include wh(108, 36);
+		margin: auto;
+		@include bg-i(-347, -74);
+		border: none;
+		outline: none;
+		&:active {
+			@include hover;
+		}
+	}
+	&-closeFancyAu {
+		position: absolute;
+		top: -30px;
+		right: -20px;
+		@include wh(60, 14);
+		@include bg-t(-166, -60);
+		border: none;
+		outline: none;
+		&:active {
+			@include hover;
+		}
+	}
+	&-goVote2 {
+		@include psudoClass;
+		position: absolute;
+		top: -11px;
+		right: -11px;
+		@include wh(188, 119);
+		@include bg-i(-306, -153);
+		border: none;
+		outline: none;
+		&:hover {
+			@include hover;
+		}
+		&:active {
+			@include hover(-1px, -1px);
+		}
+	}
+}
+
+#fancyAu {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	@include wh;
+	&.close {
+		z-index: 0;
+		// display: none;
+	}
+}
+.fancyAu {
+	&-black {
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		z-index: 10;
+		@include wh;
+		@include bg(rgba(#000, 0.6));
+		transition: all 0.3s $easing1;
+		.close & {
+			@include opacity(0);
+		}
+	}
+	&-block {
+		position: fixed;
+		// left: 50%;
+		// margin-left: -px;
+		z-index: 20;
+		@include wh(656, 481);
+		@include bg('fancyAuBlockBg.png');
+		transition: all 0.3s $easing1;
+		form {
+			position: relative;
+			width: 350px;
+			margin-top: 110px;
+			margin-left: 120px;
+		}
+		p {
+			@include adjFontSize(13px);
+		}
+		li {
+			margin-bottom: 1em;
+			float: none;
+		}
+		label {
+			width: 65px;
+			color: #623719;
+			line-height: 25px;
+		}
+		input {
+			width: 285px;
+		}
+		.close & {
+			@include opacity(0);
+		}
+	}
+}

@@ -25,6 +25,18 @@ function viewPortWidthHeight() {
   return wh;
 }
 
+function fancyAuBlockWidthHeight(){
+	var wh = {};
+	var fancyAuBlock = document.getElementById('fancyAuBlock');
+
+	if (fancyAuBlock) {
+		wh.width = fancyAuBlock.offsetWidth;
+		wh.height = fancyAuBlock.offsetHeight;
+	}
+
+	return wh;
+}
+
 function resizeBlock (){
 	var viewPortWH = viewPortWidthHeight(),
 		viewPortW = viewPortWH.width,
@@ -32,6 +44,21 @@ function resizeBlock (){
 		viewPortW2 = document.body.clientWidth,
 		viewPortH2 = document.body.clientHeight,
 		$body = $("body");
+
+	var fancyAu = document.getElementById('fancyAuBlock');
+	if (fancyAu) {
+		var blockWH = fancyAuBlockWidthHeight();
+		var blockW = blockWH.width;
+		var blockH = blockWH.height;
+
+		var blockPosY = viewPortH - blockH;
+		var blockPosX = viewPortW - blockW;
+		console.log("blockW:"+blockW+".blockH:"+blockH+".blockPosY:"+blockPosY+".blockPosX:"+blockPosX)
+		// $("html").css('overflow', 'hidden');
+		fancyAu.style.top = blockPosY / 2 + 'px';
+		fancyAu.style.left = blockPosX / 2 + 'px';
+	};
+
 
 
 	$body.height(viewPortH);
@@ -74,6 +101,10 @@ function tabs(tabBlock) {
      });
 }
 
+
+function openFancyAu(){
+	$("#fancyAu").removeClass('close');
+}
 
 //mCustomScrollbar
 $(window).load(function(){
@@ -142,5 +173,13 @@ $(function () {
 	if ($tabs.length) {
 		tabs($tabs);
 	};
+
+
+	$("#closeFancyAu").click(function() {
+		$("#fancyAuBg").addClass('close');
+		$("#fancyAuBlock").addClass('close');
+	});
+
+
 
 })
