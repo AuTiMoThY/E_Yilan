@@ -1,60 +1,11 @@
-
-<?php 
-require_once 'inc/au.php';
- ?>
-<div id="top"></div>
-<header class="global_hd">
-	<div class="wrapper">
-		<header id="logo" class="ib"><a href="<?php webPageUrlAu('indexPage'); ?>" title="寰宇財金網首頁"><img src="images/logo.png" alt=""></a></header>
-		<nav class="main_nav ib">
-			<ul class="cf">
-			<?php headerNavAu(); ?>
-
-			<?php
-				// $mainNav = array(
-				// 				'首頁'        => $indexPageUrlAu,
-				// 				'書城'        => "index_bookShop.php",
-				// 				'課程'        => $webPageBuild,
-				// 				'財金觀點'    => $webPageBuild,
-				// 				'哈燒快訊'    => $webPageBuild,
-				// 				'我的IPC'     => $webPageBuild);
-				// $mainNavLen = 0;
-				// $mainNavLen ++;
-
-				// foreach ($mainNav as $item => $url) {
-			?>
-<!-- 				<li class="main_nav-item nav-IPC item<?php //echo $mainNavLen; ?>">
-					<a href="<?php //echo $url; ?>">
-						<span class="wrap"><span class="main_nav-icon"></span><span><?php //echo $item; ?></span></span>
-					</a>
-				</li> -->
-			<?php
-				// 	++$mainNavLen;
-				// }
-			?>
-			</ul>
-		</nav>
-		<div class="quick_login ib">
-			<a href="<?php webPageUrlAu('loginPage'); ?>" class="login_btn">登入 | 註冊</a>
-			<a href="<?php webPageUrlAu('loginPage'); ?>" class="fb_btn"><span class="icon"></span>登入</a>
-		</div>
-	</div>
-</header>
-<header class="quick_bar">
-	<div class="wrapper">
-		<ul class="social ib">
-			<li class="line_r"></li>
-			<li><a href="<?php webPageUrlAu('webPageBuild'); ?>" class="social-icon icon1 hide_txt">RSS</a></li>
-			<li><a href="<?php webPageUrlAu('webPageBuild'); ?>" class="social-icon icon2 hide_txt">Facebook</a></li>
-			<li><a href="<?php webPageUrlAu('webPageBuild'); ?>" class="social-icon icon3 hide_txt">Google Plus</a></li>
-			<li class="line_l"></li>
+<header class="cloud">
+	<nav class="main_nav">
+		<ul class="js-goWhere">
+			<li class="item1"><a href="index.php#slide3" class="hide_txt">活動計畫</a></li>
+			<li class="item2"><a href="vote.php" class="hide_txt">我要投票</a></li>
+			<li class="item3"><a href="http://www.yilantourism2015.com/upload/2015宜蘭四季創意遊程甄選活動__簡章0212.doc"></a></li>
+			<li class="item4"></li>
+			<li class="item5"><a href="index.php#slide4" class="hide_txt"> 諮詢服務</a></li>
 		</ul>
-		<div class="fb-like" data-href="http://www.ipci.com.tw/demo/" data-layout="button_count" data-action="recommend" data-show-faces="false" data-share="true"></div>
-		<div class="search_block ib">
-			<form action="" class="search_form">
-				<span class="search_form-inp ib"><input type="text" name="" id="" class="" placeholder="輸入想尋找的關鍵字..."></span>
-				<span class="search_form-btn ib"><input type="button" name="" id="" class="" onclick="<?php webPageUrlAu('webPageBuild'); ?>"></span>
-			</form>
-		</div>
-	</div>
+	</nav>
 </header>

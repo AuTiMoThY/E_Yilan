@@ -53,7 +53,11 @@
 		top: 32%;
 		z-index: 10;
 	}
-
+	.txt {
+		position: absolute;
+		top: 80%;
+		right: 25%;
+	}
 }
 .apply {
 	@include wh(139px, 39px);
@@ -74,6 +78,13 @@
 	right: 9%;
 	z-index: 99;
 	@include wh(374, 887);
+	img {
+		width: 100%;
+	}
+	@include respond-to(Mscreen){
+		@include wh(374 * 0.6, 887 * 0.6);
+		right: 0;
+	};
 }
 
 
