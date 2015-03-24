@@ -98,12 +98,12 @@
 <div class="plan-pic pic2"><img src="images/plan-pic2.png" alt=""></div>
 <div id="infTab" class="tab_block plan-tab_block">
 	<ul class="tabs">
-		<li class="tab1"> <a href="#tab1" id="" class="btn-tab1 hide_txt">計畫目標</a></li>
-		<li class="tab2"> <a href="#tab2" id="" class="btn-tab2 hide_txt">活動時間</a></li>
-		<li class="tab3"> <a href="#tab3" id="" class="btn-tab3 hide_txt">分組類別</a></li>
-		<li class="tab4"> <a href="#tab4" id="" class="btn-tab4 hide_txt">遊程內容</a></li>
-		<li class="tab5"> <a href="#tab5" id="" class="btn-tab5 hide_txt">報名方式</a></li>
-		<li class="tab6"> <a href="#tab6" id="" class="btn-tab6 hide_txt">獎勵辦法</a></li>
+		<li id="tab1btn" class="tab1 active"> <a href="javascript:void 0;" class="btn-tab1 hide_txt">計畫目標</a></li>
+		<li id="tab2btn" class="tab2"> <a href="javascript:void 0;" class="btn-tab2 hide_txt">活動時間</a></li>
+		<li id="tab3btn" class="tab3"> <a href="javascript:void 0;" class="btn-tab3 hide_txt">分組類別</a></li>
+		<li id="tab4btn" class="tab4"> <a href="javascript:void 0;" class="btn-tab4 hide_txt">遊程內容</a></li>
+		<li id="tab5btn" class="tab5"> <a href="javascript:void 0;" class="btn-tab5 hide_txt">報名方式</a></li>
+		<li id="tab6btn" class="tab6"> <a href="javascript:void 0;" class="btn-tab6 hide_txt">獎勵辦法</a></li>
 	</ul>
 	<!--  .tab_container  START  !!  -->
 	<h2 class="hide_txt">活動計畫</h2>
@@ -145,11 +145,11 @@
 		<div id="tab5" class="tab_content scrollbar">
 			<section class="">
 <p>
-（ㄧ）請於活動官網（宜蘭縣政府工商旅遊處網站）列印報名表、企畫書、參與甄選聲明書，並於報名期限內，將報名表及企劃書(附件一)、參加甄選聲明書(附件二)以 EMAIL方式至主辦單位minghong0522@mail.e-land.gov.tw，或以掛號郵寄「26060宜蘭市縣政北路1號工商旅遊處觀光行銷科」(信封上註明2015宜蘭四季創意遊程甄選字樣)。<br>
-（二）主辦單位將於三天內回覆報名結果，如果未收到回覆結果，請聯絡主辦單位。<br>
+（ㄧ）請於活動官網（宜蘭縣政府工商旅遊處網站）列印報名表、企畫書、參與甄選聲明書，<br>並於報名期限內，將報名表及企劃書(附件一)、參加甄選聲明書(附件二)以 EMAIL方式至主辦單位minghong0522@mail.e-land.gov.tw，<br>或以掛號郵寄「26060宜蘭市縣政北路1號工商旅遊處觀光行銷科」(信封上註明2015宜蘭四季創意遊程甄選字樣)。<br><br>
+（二）主辦單位將於三天內回覆報名結果，如果未收到回覆結果，請聯絡主辦單位。<br><br>
 （三）參賽隊伍須繳交之文件：<br>
  1.報名表連同企劃書乙份。<br>
- 2.參加甄選聲明書乙份。<br>
+ 2.參加甄選聲明書乙份。<br><br>
 請將上述文件以EMAIL或郵寄掛號寄至主辦單位。
 </p>
 			</section>
