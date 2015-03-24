@@ -35,6 +35,9 @@
 				transform: translateY(-10px);
 			}
 		}
+		@include respond-to(Sscreen){
+			margin: 0 0.5em;
+		};
 	}
 
 }
